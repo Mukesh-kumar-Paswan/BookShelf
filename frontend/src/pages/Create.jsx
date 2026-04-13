@@ -30,7 +30,7 @@ const Create = () => {
       onSubmit={async (e) => {
         e.preventDefault();
         try {
-          const response = await axios.post(
+          await axios.post(
             "/bookshelf",
             { book: formData },
             { withCredentials: true },
