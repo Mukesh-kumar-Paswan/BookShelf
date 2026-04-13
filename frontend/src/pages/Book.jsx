@@ -34,7 +34,7 @@ const Book = () => {
 
   const deleteBook = async () => {
     try {
-      const book = await axios.delete(`/${id}`, {
+      const book = await axios.delete(`/bookshelf/${id}`, {
         withCredentials: true,
       });
       // console.log(book);
@@ -73,7 +73,7 @@ const Book = () => {
               e.preventDefault();
               try {
                 const reviewResponser = await axios.post(
-                  `/${id}/reviews`,
+                  `/bookshelf/${id}/reviews`,
                   { review: { stars: rating, comments: review } },
                   { withCredentials: true },
                 );
@@ -170,7 +170,7 @@ const Book = () => {
                         onClick={async () => {
                           try {
                             await axios.delete(
-                              `/${id}/reviews/${ele._id}`,
+                              `/bookshelf/${id}/reviews/${ele._id}`,
                               { withCredentials: true },
                             );
                             const updateList = reviewList.filter((itm) => {

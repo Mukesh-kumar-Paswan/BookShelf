@@ -2,7 +2,7 @@ import axios from "axios";
 
 // bookshelf Loader function
 export const bookshelfLoader = async () => {
-  const response = await axios.get("/", {
+  const response = await axios.get("/bookshelf", {
     withCredentials: true,
   });
 

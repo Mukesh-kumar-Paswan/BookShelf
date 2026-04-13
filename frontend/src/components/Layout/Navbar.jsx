@@ -15,7 +15,7 @@ const Navbar = () => {
   const logout = async () => {
     try {
       await axios.post(
-        "/logout",
+        "/bookshelf/logout",
         {},
         {
           withCredentials: true,

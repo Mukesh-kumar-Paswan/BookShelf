@@ -31,7 +31,7 @@ const Create = () => {
         e.preventDefault();
         try {
           const response = await axios.post(
-            "/",
+            "/bookshelf",
             { book: formData },
             { withCredentials: true },
           );

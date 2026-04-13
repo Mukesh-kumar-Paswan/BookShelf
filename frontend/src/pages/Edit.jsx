@@ -32,7 +32,7 @@ const Edit = () => {
       onSubmit={async (e) => {
         e.preventDefault();
         try {
-          const response = await axios.put(`/${id}` , {book : formData} , {withCredentials : true})
+          const response = await axios.put(`/bookshelf/${id}` , {book : formData} , {withCredentials : true})
           // console.log(response);
           navigate(`/bookshelf/${id}`);
         } catch (e) {

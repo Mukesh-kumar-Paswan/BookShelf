@@ -10,7 +10,7 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const currUser = await axios.get("/verify", {
+        const currUser = await axios.get("/bookshelf/verify", {
           withCredentials: true,
         });
         // console.log(currUser.data.user.username);

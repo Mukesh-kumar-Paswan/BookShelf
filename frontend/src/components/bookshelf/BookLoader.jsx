@@ -12,7 +12,7 @@ const BookLoader = ({ params }) => {
   const Book = async () => {
     try {
       const response = await axios.get(
-        `/${id}`,
+        `/bookshelf/${id}`,
         {
           withCredentials: true,
         },
