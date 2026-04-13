@@ -1,11 +1,12 @@
 import { useContext } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 import axios from "axios";
 import { toast } from "react-toastify";
 
 const Navbar = () => {
-  const { isLoggedIn, setIsLoggedIn, user , setUser } = useContext(AuthContext);
+  const { isLoggedIn, setIsLoggedIn, user, setUser } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const notify = () =>
     toast.error("Please Try again", {
@@ -23,6 +24,7 @@ const Navbar = () => {
       );
       setUser(null);
       setIsLoggedIn(false);
+      navigate("/");
     } catch (e) {
       console.log(e);
       notify();
