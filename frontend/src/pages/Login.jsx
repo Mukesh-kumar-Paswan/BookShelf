@@ -21,7 +21,7 @@ const Login = () => {
         e.preventDefault();
         try {
           const response = await axios.post(
-            "/bookshelf/signin",
+            "/signin",
             {
               username: username,
               password: password,

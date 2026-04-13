@@ -31,7 +31,7 @@ const Singup = () => {
     <form onSubmit={async (e) => {
       e.preventDefault();
       try {
-        const response = await axios.post("/bookshelf/signup" , {...formData} , {withCredentials : true})
+        const response = await axios.post("/signup" , {...formData} , {withCredentials : true})
         // console.log(response);
         setUser(response.data.user.username);
         setIsLoggedIn(true);
