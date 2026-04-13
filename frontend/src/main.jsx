@@ -15,7 +15,7 @@ import { bookshelfLoader } from "./components/bookshelf/bookshelfLoader.js";
 import Loader from "./components/Loader/Loader.jsx";
 import { AuthProvider } from "./context/AuthProvider.jsx";
 import ProtectedRoute from "./components/Protection/ProtectedRoute.jsx";
-import bookLoader from "./components/bookshelf/bookLoader.jsx";
+import bookLoader from "./components/bookshelf/BookLoader.jsx";
 import SingleBookLoader from "./components/Loader/SingleBookLoader.jsx";
 
 const router = createBrowserRouter([
