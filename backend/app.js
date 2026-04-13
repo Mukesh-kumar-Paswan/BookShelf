@@ -22,7 +22,7 @@ const cookieParser = require("cookie-parser");
 const cors = require("cors");
 
 const corsOptions = {
-  origin: process.env.CROSS_ORIGIN,
+  origin: process.env.CROSS_ORIGIN || "http://localhost:5173",
   methods: "GET,PUT,PATCH,POST,DELETE",
   credentials: true,
   optionsSuccessStatus: 200,
