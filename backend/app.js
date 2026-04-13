@@ -4,6 +4,7 @@ require("dotenv").config({ quiet: true });
 // Express
 const express = require("express");
 const app = express();
+app.set("trust proxy", 1);
 
 // routes
 const bookShelfRouter = require("./routes/bookshelf");
@@ -23,7 +24,7 @@ const cors = require("cors");
 
 const allowedOrigins = [
   "http://localhost:5173",
-  process.env.CROSS_ORIGIN,
+  "https://book-shelf-two-peach.vercel.app",
   "https://book-shelf-git-main-ninjaz9s-projects.vercel.app",
 ];
 
